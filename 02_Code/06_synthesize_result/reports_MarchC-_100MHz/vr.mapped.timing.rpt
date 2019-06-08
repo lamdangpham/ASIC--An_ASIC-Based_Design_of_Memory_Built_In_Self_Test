@@ -1,0 +1,273 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nets
+        -max_paths 1
+        -transition_time
+Design : vr
+Version: C-2009.06
+Date   : Mon Jan  2 14:50:57 2017
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: TYPICAL   Library: saed90nm_typ_ht
+Wire Load Model Mode: top
+
+  Startpoint: allowable_faulty[1]
+              (input port clocked by clk)
+  Endpoint: force_terminate
+            (output port clocked by clk)
+  Path Group: FEEDTHROUGH
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ------------------------------------------------------------------------------------------------------
+  clock clk (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.10       0.10
+  input external delay                                              0.10       0.20 f
+  allowable_faulty[1] (in)                                0.00      0.00       0.20 f
+  allowable_faulty[1] (net)                     2                   0.00       0.20 f
+  mbist_decoder_1/allowable_faulty[1] (mbist_decoder)               0.00       0.20 f
+  mbist_decoder_1/allowable_faulty[1] (net)                         0.00       0.20 f
+  mbist_decoder_1/marchc_decoder_1/allowable_faulty[1] (marchc_decoder)     0.00     0.20 f
+  mbist_decoder_1/marchc_decoder_1/allowable_faulty[1] (net)        0.00       0.20 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/allowable_faulty[1] (marchc_datapath)     0.00     0.20 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/allowable_faulty[1] (net)     0.00     0.20 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/U307/Q (OA22X1)     0.09     0.16     0.36 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/n283 (net)     1     0.00     0.36 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/U308/Q (AO21X1)     0.08     0.12     0.48 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/n284 (net)     2     0.00     0.48 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/U309/Q (AO222X1)     0.14     0.29     0.77 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/n285 (net)     2     0.00     0.77 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/U310/Q (AO222X1)     0.14     0.27     1.03 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/n286 (net)     2     0.00     1.03 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/U311/Q (AO222X1)     0.13     0.29     1.32 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/n287 (net)     2     0.00     1.32 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/U312/Q (AO222X1)     0.14     0.27     1.59 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/n288 (net)     2     0.00     1.59 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/U313/Q (AO222X1)     0.13     0.28     1.86 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/n289 (net)     1     0.00     1.86 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/U314/Q (AO21X1)     0.08     0.12     1.98 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/n290 (net)     1     0.00     1.98 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/U315/Q (AND4X1)     0.09     0.20     2.18 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/n301 (net)     1     0.00     2.18 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/U319/QN (NOR4X0)     0.28     0.07     2.25 r
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/force_terminate (net)     1     0.00     2.25 r
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/force_terminate (marchc_datapath)     0.00     2.25 r
+  mbist_decoder_1/marchc_decoder_1/force_terminate (net)            0.00       2.25 r
+  mbist_decoder_1/marchc_decoder_1/force_terminate (marchc_decoder)     0.00     2.25 r
+  mbist_decoder_1/marchc_force_terminate (net)                      0.00       2.25 r
+  mbist_decoder_1/U4/Q (AND2X1)                           0.09      0.11       2.36 r
+  mbist_decoder_1/force_terminate (net)         1                   0.00       2.36 r
+  mbist_decoder_1/force_terminate (mbist_decoder)                   0.00       2.36 r
+  force_terminate (net)                                             0.00       2.36 r
+  force_terminate (out)                                   0.09      0.00       2.36 r
+  data arrival time                                                            2.36
+
+  clock clk (rise edge)                                            10.00      10.00
+  clock network delay (ideal)                                       0.10      10.10
+  clock uncertainty                                                -0.10      10.00
+  output external delay                                            -0.10       9.90
+  data required time                                                           9.90
+  ------------------------------------------------------------------------------------------------------
+  data required time                                                           9.90
+  data arrival time                                                           -2.36
+  ------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  7.54
+
+
+  Startpoint: memory_sel[0]
+              (input port clocked by clk)
+  Endpoint: mbist_mux_demux_1/address_1_reg_0_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: REGIN
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ------------------------------------------------------------------------------------------------------
+  clock clk (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.10       0.10
+  input external delay                                              0.10       0.20 r
+  memory_sel[0] (in)                                      0.00      0.00       0.20 r
+  memory_sel[0] (net)                           6                   0.00       0.20 r
+  mbist_mux_demux_1/memory_sel[0] (mbist_mux_demux)                 0.00       0.20 r
+  mbist_mux_demux_1/memory_sel[0] (net)                             0.00       0.20 r
+  mbist_mux_demux_1/U11/QN (INVX0)                        0.07      0.04       0.24 f
+  mbist_mux_demux_1/n721 (net)                  3                   0.00       0.24 f
+  mbist_mux_demux_1/U1003/QN (NOR3X0)                     2.26      0.99       1.23 r
+  mbist_mux_demux_1/n806 (net)                 65                   0.00       1.23 r
+  mbist_mux_demux_1/U9/QN (INVX0)                         1.42      1.03       2.26 f
+  mbist_mux_demux_1/n719 (net)                 81                   0.00       2.26 f
+  mbist_mux_demux_1/U973/QN (NOR2X0)                      0.35      0.13       2.39 r
+  mbist_mux_demux_1/N177 (net)                  1                   0.00       2.39 r
+  mbist_mux_demux_1/address_1_reg_0_/D (DFFARX1)          0.35      0.00       2.39 r
+  data arrival time                                                            2.39
+
+  clock clk (rise edge)                                            10.00      10.00
+  clock network delay (ideal)                                       0.10      10.10
+  clock uncertainty                                                -0.10      10.00
+  mbist_mux_demux_1/address_1_reg_0_/CLK (DFFARX1)                  0.00      10.00 r
+  library setup time                                               -0.22       9.78
+  data required time                                                           9.78
+  ------------------------------------------------------------------------------------------------------
+  data required time                                                           9.78
+  data arrival time                                                           -2.39
+  ------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  7.40
+
+
+  Startpoint: mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/error_counter_reg_1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: force_terminate
+            (output port clocked by clk)
+  Path Group: REGOUT
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ------------------------------------------------------------------------------------------------------
+  clock clk (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.10       0.10
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/error_counter_reg_1_/CLK (DFFARX1)     0.10     0.00 #     0.10 r
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/error_counter_reg_1_/QN (DFFARX1)     0.13     0.26     0.36 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/n31 (net)     3     0.00     0.36 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/U307/Q (OA22X1)     0.09     0.16     0.52 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/n283 (net)     1     0.00     0.52 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/U308/Q (AO21X1)     0.08     0.12     0.64 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/n284 (net)     2     0.00     0.64 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/U309/Q (AO222X1)     0.14     0.29     0.92 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/n285 (net)     2     0.00     0.92 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/U310/Q (AO222X1)     0.14     0.27     1.19 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/n286 (net)     2     0.00     1.19 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/U311/Q (AO222X1)     0.13     0.29     1.48 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/n287 (net)     2     0.00     1.48 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/U312/Q (AO222X1)     0.14     0.27     1.74 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/n288 (net)     2     0.00     1.74 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/U313/Q (AO222X1)     0.13     0.28     2.02 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/n289 (net)     1     0.00     2.02 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/U314/Q (AO21X1)     0.08     0.12     2.14 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/n290 (net)     1     0.00     2.14 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/U315/Q (AND4X1)     0.09     0.20     2.34 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/n301 (net)     1     0.00     2.34 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/U319/QN (NOR4X0)     0.28     0.07     2.41 r
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/force_terminate (net)     1     0.00     2.41 r
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/force_terminate (marchc_datapath)     0.00     2.41 r
+  mbist_decoder_1/marchc_decoder_1/force_terminate (net)            0.00       2.41 r
+  mbist_decoder_1/marchc_decoder_1/force_terminate (marchc_decoder)     0.00     2.41 r
+  mbist_decoder_1/marchc_force_terminate (net)                      0.00       2.41 r
+  mbist_decoder_1/U4/Q (AND2X1)                           0.09      0.11       2.52 r
+  mbist_decoder_1/force_terminate (net)         1                   0.00       2.52 r
+  mbist_decoder_1/force_terminate (mbist_decoder)                   0.00       2.52 r
+  force_terminate (net)                                             0.00       2.52 r
+  force_terminate (out)                                   0.09      0.00       2.52 r
+  data arrival time                                                            2.52
+
+  clock clk (rise edge)                                            10.00      10.00
+  clock network delay (ideal)                                       0.10      10.10
+  clock uncertainty                                                -0.10      10.00
+  output external delay                                            -0.10       9.90
+  data required time                                                           9.90
+  ------------------------------------------------------------------------------------------------------
+  data required time                                                           9.90
+  data arrival time                                                           -2.52
+  ------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  7.38
+
+
+  Startpoint: mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/address_2_reg_2_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/address_2_reg_6_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ------------------------------------------------------------------------------------------------------
+  clock clk (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.10       0.10
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/address_2_reg_2_/CLK (DFFARX1)     0.10     0.00 #     0.10 r
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/address_2_reg_2_/Q (DFFARX1)     0.12     0.38     0.48 r
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/address_2[2] (net)     4     0.00     0.48 r
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/U320/QN (NAND4X0)     0.14     0.08     0.56 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/n339 (net)     2     0.00     0.56 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/U321/QN (NOR2X0)     0.18     0.09     0.65 r
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/n335 (net)     3     0.00     0.65 r
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/U108/QN (NAND2X0)     0.14     0.08     0.73 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/n333 (net)     2     0.00     0.73 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/U322/QN (NOR2X0)     0.18     0.09     0.82 r
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/n331 (net)     3     0.00     0.82 r
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/U77/QN (NAND2X0)     0.14     0.08     0.90 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/n329 (net)     2     0.00     0.90 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/U166/QN (NOR2X0)     0.23     0.11     1.01 r
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/n323 (net)     5     0.00     1.01 r
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/U323/Q (AND3X1)     0.12     0.18     1.19 r
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/n314 (net)     5     0.00     1.19 r
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/U324/QN (NAND3X0)     0.11     0.06     1.25 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/n307 (net)     2     0.00     1.25 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/U153/QN (NOR2X0)     0.14     0.07     1.31 r
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/n304 (net)     2     0.00     1.31 r
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/U60/QN (NAND2X0)     0.12     0.08     1.39 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/n303 (net)     2     0.00     1.39 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/U152/QN (NOR2X0)     0.22     0.10     1.49 r
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/n318 (net)     5     0.00     1.49 r
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/U151/QN (INVX0)     0.12     0.08     1.57 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/n324 (net)     5     0.00     1.57 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/U185/Q (AO21X1)     0.12     0.17     1.75 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/n338 (net)     6     0.00     1.75 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/U150/QN (INVX0)     0.21     0.10     1.85 r
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/n343 (net)     7     0.00     1.85 r
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/U34/QN (NAND2X0)     0.16     0.09     1.94 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/n345 (net)     3     0.00     1.94 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/U149/QN (INVX0)     0.30     0.15     2.09 r
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/n342 (net)    11     0.00     2.09 r
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/U347/QN (NAND4X0)     0.13     0.07     2.16 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/n334 (net)     1     0.00     2.16 f
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/U348/QN (OAI21X1)     0.07     0.22     2.38 r
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/n524 (net)     1     0.00     2.38 r
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/address_2_reg_6_/D (DFFARX1)     0.07     0.00     2.38 r
+  data arrival time                                                            2.38
+
+  clock clk (rise edge)                                            10.00      10.00
+  clock network delay (ideal)                                       0.10      10.10
+  clock uncertainty                                                -0.10      10.00
+  mbist_decoder_1/marchc_decoder_1/marchc_datapath_1/address_2_reg_6_/CLK (DFFARX1)     0.00    10.00 r
+  library setup time                                               -0.18       9.82
+  data required time                                                           9.82
+  ------------------------------------------------------------------------------------------------------
+  data required time                                                           9.82
+  data arrival time                                                           -2.38
+  ------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  7.44
+
+
+1

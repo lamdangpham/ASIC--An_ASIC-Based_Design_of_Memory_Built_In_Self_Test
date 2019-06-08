@@ -1,0 +1,40 @@
+Loading db file '/home/quangtruong/synopsys/LIB/SAED90_EDK/SAED_EDK90nm_REF/references/ChipTop/models/saed90nm_typ_ht_pg.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : vr
+Version: C-2009.06
+Date   : Mon Jan  2 14:59:50 2017
+****************************************
+
+
+Library(s) Used:
+
+    saed90nm_typ_ht (File: /home/quangtruong/synopsys/LIB/SAED90_EDK/SAED_EDK90nm_REF/references/ChipTop/models/saed90nm_typ_ht_pg.db)
+
+
+Operating Conditions: TYPICAL   Library: saed90nm_typ_ht
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 1.2  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+  Cell Internal Power  =   9.4928 mW  (100%)
+  Net Switching Power  =  25.6739 uW    (0%)
+                         ---------
+Total Dynamic Power    =   9.5184 mW  (100%)
+
+Cell Leakage Power     = 647.8274 uW
+
+1

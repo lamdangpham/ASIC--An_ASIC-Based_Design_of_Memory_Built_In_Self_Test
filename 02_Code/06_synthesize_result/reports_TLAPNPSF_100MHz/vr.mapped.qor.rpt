@@ -1,0 +1,102 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'vr' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : qor
+Design : vr
+Version: C-2009.06
+Date   : Mon Jan  2 14:59:47 2017
+****************************************
+
+
+  Timing Path Group 'FEEDTHROUGH'
+  -----------------------------------
+  Levels of Logic:              10.00
+  Critical Path Length:          1.96
+  Critical Path Slack:           7.74
+  Critical Path Clk Period:     10.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+  Timing Path Group 'REGIN'
+  -----------------------------------
+  Levels of Logic:              22.00
+  Critical Path Length:          4.15
+  Critical Path Slack:           5.52
+  Critical Path Clk Period:     10.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+  Timing Path Group 'REGOUT'
+  -----------------------------------
+  Levels of Logic:              10.00
+  Critical Path Length:          2.24
+  Critical Path Slack:           7.56
+  Critical Path Clk Period:     10.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+  Timing Path Group 'clk'
+  -----------------------------------
+  Levels of Logic:              30.00
+  Critical Path Length:          6.04
+  Critical Path Slack:           3.72
+  Critical Path Clk Period:     10.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:          6
+  Hierarchical Port Count:       1913
+  Leaf Cell Count:               3213
+  Buf/Inv Cell Count:             180
+  CT Buf/Inv Cell Count:            0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:    17369.037192
+  Noncombinational Area: 32409.904514
+  Net Area:                  0.000000
+  -----------------------------------
+  Cell Area:             49778.941706
+  Design Area:           49778.941706
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:          3890
+  Nets With Violations:             0
+  -----------------------------------
+
+
+  Hostname: quangtruong
+
+  Compile CPU Statistics
+  -----------------------------------
+  Resource Sharing:              2.28
+  Logic Optimization:            8.05
+  Mapping Optimization:          8.15
+  -----------------------------------
+  Overall Compile Time:         27.34
+
+1

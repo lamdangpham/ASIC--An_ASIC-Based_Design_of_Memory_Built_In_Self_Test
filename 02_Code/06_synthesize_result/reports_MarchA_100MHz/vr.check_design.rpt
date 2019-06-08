@@ -1,0 +1,12 @@
+Warning: In design 'vr', input pin 'Port14' of hierarchical cell 'mbist_decoder_1' has no internal loads and is not connected to any nets. (LINT-60)
+Warning: In design 'controller', port 'operation[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'controller', port 'operation[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'controller', port 'operation[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'controller', input port 'marcha_complete' is connected directly to output port 'complete'. (LINT-29)
+Warning: In design 'mbist_decoder', port 'Port14' is not connected to any nets. (LINT-28)
+Warning: In design 'marcha_datapath', cell 'C2910' does not drive any nets. (LINT-1)
+Warning: In design 'marcha_datapath', cell 'C2965' does not drive any nets. (LINT-1)
+Warning: In design 'marcha_datapath', cell 'C2996' does not drive any nets. (LINT-1)
+Warning: In design 'marcha_datapath', cell 'C3028' does not drive any nets. (LINT-1)
+Warning: In design 'marcha_datapath', cell 'C3095' does not drive any nets. (LINT-1)
+1

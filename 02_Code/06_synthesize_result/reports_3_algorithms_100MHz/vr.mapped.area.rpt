@@ -1,0 +1,24 @@
+ 
+****************************************
+Report : area
+Design : vr
+Version: C-2009.06
+Date   : Mon Jan  2 15:02:13 2017
+****************************************
+
+Library(s) Used:
+
+    saed90nm_typ_ht (File: /home/quangtruong/synopsys/LIB/SAED90_EDK/SAED_EDK90nm_REF/references/ChipTop/models/saed90nm_typ_ht_pg.db)
+
+Number of ports:             1194
+Number of nets:              1345
+Number of cells:                3
+Number of references:           3
+
+Combinational area:       29933.447184
+Noncombinational area:    46938.934685
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:          76872.381869
+Total area:                 undefined
+1

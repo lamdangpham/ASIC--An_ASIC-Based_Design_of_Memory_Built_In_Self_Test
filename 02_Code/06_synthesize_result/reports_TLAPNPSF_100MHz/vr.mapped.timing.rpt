@@ -1,0 +1,336 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nets
+        -max_paths 1
+        -transition_time
+Design : vr
+Version: C-2009.06
+Date   : Mon Jan  2 14:59:47 2017
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: TYPICAL   Library: saed90nm_typ_ht
+Wire Load Model Mode: top
+
+  Startpoint: allowable_faulty[1]
+              (input port clocked by clk)
+  Endpoint: force_terminate
+            (output port clocked by clk)
+  Path Group: FEEDTHROUGH
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ------------------------------------------------------------------------------------------------------
+  clock clk (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.10       0.10
+  input external delay                                              0.10       0.20 f
+  allowable_faulty[1] (in)                                0.00      0.00       0.20 f
+  allowable_faulty[1] (net)                     2                   0.00       0.20 f
+  mbist_decoder_1/allowable_faulty[1] (mbist_decoder)               0.00       0.20 f
+  mbist_decoder_1/allowable_faulty[1] (net)                         0.00       0.20 f
+  mbist_decoder_1/apnpsf_decoder_1/allowable_faulty[1] (apnpsf_decoder)     0.00     0.20 f
+  mbist_decoder_1/apnpsf_decoder_1/allowable_faulty[1] (net)        0.00       0.20 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/allowable_faulty[1] (apnpsf_datapath)     0.00     0.20 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/allowable_faulty[1] (net)     0.00     0.20 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/U133/Q (OA22X1)     0.09     0.15     0.35 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/n207 (net)     1     0.00     0.35 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/U134/Q (AO21X1)     0.09     0.12     0.47 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/n208 (net)     2     0.00     0.47 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/U135/Q (AO222X1)     0.14     0.26     0.74 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/n209 (net)     2     0.00     0.74 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/U136/Q (AO222X1)     0.14     0.27     1.00 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/n210 (net)     2     0.00     1.00 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/U137/Q (AO222X1)     0.14     0.27     1.27 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/n211 (net)     2     0.00     1.27 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/U138/Q (AO222X1)     0.13     0.26     1.53 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/n212 (net)     1     0.00     1.53 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/U140/Q (AO222X1)     0.13     0.27     1.79 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/n214 (net)     1     0.00     1.79 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/U141/Q (AND4X1)     0.09     0.20     2.00 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/n215 (net)     1     0.00     2.00 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/U150/QN (NOR3X0)     0.19     0.07     2.06 r
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/force_terminate (net)     1     0.00     2.06 r
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/force_terminate (apnpsf_datapath)     0.00     2.06 r
+  mbist_decoder_1/apnpsf_decoder_1/force_terminate (net)            0.00       2.06 r
+  mbist_decoder_1/apnpsf_decoder_1/force_terminate (apnpsf_decoder)     0.00     2.06 r
+  mbist_decoder_1/apnpsf_force_terminate (net)                      0.00       2.06 r
+  mbist_decoder_1/U4/Q (AND2X1)                           0.09      0.10       2.16 r
+  mbist_decoder_1/force_terminate (net)         1                   0.00       2.16 r
+  mbist_decoder_1/force_terminate (mbist_decoder)                   0.00       2.16 r
+  force_terminate (net)                                             0.00       2.16 r
+  force_terminate (out)                                   0.09      0.00       2.16 r
+  data arrival time                                                            2.16
+
+  clock clk (rise edge)                                            10.00      10.00
+  clock network delay (ideal)                                       0.10      10.10
+  clock uncertainty                                                -0.10      10.00
+  output external delay                                            -0.10       9.90
+  data required time                                                           9.90
+  ------------------------------------------------------------------------------------------------------
+  data required time                                                           9.90
+  data arrival time                                                           -2.16
+  ------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  7.74
+
+
+  Startpoint: memtype[2] (input port clocked by clk)
+  Endpoint: mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/address_2_reg_15_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: REGIN
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ------------------------------------------------------------------------------------------------------
+  clock clk (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.10       0.10
+  input external delay                                              0.10       0.20 r
+  memtype[2] (in)                                         0.00      0.00       0.20 r
+  memtype[2] (net)                              8                   0.00       0.20 r
+  mbist_decoder_1/memtype[2] (mbist_decoder)                        0.00       0.20 r
+  mbist_decoder_1/memtype[2] (net)                                  0.00       0.20 r
+  mbist_decoder_1/apnpsf_decoder_1/memtype[2] (apnpsf_decoder)      0.00       0.20 r
+  mbist_decoder_1/apnpsf_decoder_1/memtype[2] (net)                 0.00       0.20 r
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/memtype[2] (apnpsf_datapath)     0.00     0.20 r
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/memtype[2] (net)     0.00     0.20 r
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/U240/QN (NAND2X0)     0.11     0.06     0.26 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/n445 (net)     2     0.00     0.26 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/U124/Q (OA22X1)     0.09     0.17     0.43 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/n197 (net)     1     0.00     0.43 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/U125/Q (AND2X1)     0.06     0.10     0.53 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/n198 (net)     1     0.00     0.53 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/U126/Q (OA222X1)     0.15     0.24     0.77 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/n449 (net)     1     0.00     0.77 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/U176/QN (NAND2X0)     0.13     0.07     0.84 r
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/n340 (net)     1     0.00     0.84 r
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/U342/Q (AND2X1)     0.08     0.11     0.95 r
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/RSOP_343_U1_mbist_decoder_1_apnpsf_decoder_1_apnpsf_datapath_1_RSOP_343_C1_Z_2 (net)     2     0.00     0.95 r
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_U20/Q (XOR2X1)     0.10     0.18     1.13 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_n21 (net)     1     0.00     1.13 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_U15/CO (FADDX1)     0.12     0.20     1.32 f mo 
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_n14 (net)     1     0.00     1.32 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_U14/CO (FADDX1)     0.13     0.21     1.54 f mo 
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_n13 (net)     1     0.00     1.54 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_U13/CO (FADDX1)     0.13     0.21     1.75 f mo 
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_n12 (net)     1     0.00     1.75 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_U12/CO (FADDX1)     0.13     0.21     1.97 f mo 
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_n11 (net)     1     0.00     1.97 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_U11/CO (FADDX1)     0.13     0.21     2.18 f mo 
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_n10 (net)     1     0.00     2.18 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_U10/CO (FADDX1)     0.13     0.21     2.39 f mo 
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_n9 (net)     1     0.00     2.39 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_U9/CO (FADDX1)     0.13     0.21     2.61 f mo 
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_n8 (net)     1     0.00     2.61 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_U8/CO (FADDX1)     0.13     0.21     2.82 f mo 
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_n7 (net)     1     0.00     2.82 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_U7/CO (FADDX1)     0.13     0.21     3.03 f mo 
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_n6 (net)     1     0.00     3.03 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_U6/CO (FADDX1)     0.13     0.21     3.25 f mo 
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_n5 (net)     1     0.00     3.25 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_U5/CO (FADDX1)     0.13     0.21     3.46 f mo 
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_n4 (net)     1     0.00     3.46 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_U4/CO (FADDX1)     0.13     0.21     3.68 f mo 
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_n3 (net)     1     0.00     3.68 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_U3/CO (FADDX1)     0.10     0.19     3.87 f mo 
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_n2 (net)     1     0.00     3.87 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/U160/Q (XOR3X1)     0.09     0.30     4.17 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/n230 (net)     1     0.00     4.17 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/U161/Q (AO22X1)     0.10     0.18     4.35 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/n835 (net)     1     0.00     4.35 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/address_2_reg_15_/D (DFFARX1)     0.10     0.00     4.35 f
+  data arrival time                                                            4.35
+
+  clock clk (rise edge)                                            10.00      10.00
+  clock network delay (ideal)                                       0.10      10.10
+  clock uncertainty                                                -0.10      10.00
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/address_2_reg_15_/CLK (DFFARX1)     0.00    10.00 r
+  library setup time                                               -0.14       9.86
+  data required time                                                           9.86
+  ------------------------------------------------------------------------------------------------------
+  data required time                                                           9.86
+  data arrival time                                                           -4.35
+  ------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  5.52
+
+
+  Startpoint: mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/error_counter_reg_1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: force_terminate
+            (output port clocked by clk)
+  Path Group: REGOUT
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ------------------------------------------------------------------------------------------------------
+  clock clk (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.10       0.10
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/error_counter_reg_1_/CLK (DFFARX1)     0.10     0.00 #     0.10 r
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/error_counter_reg_1_/QN (DFFARX1)     0.13     0.26     0.36 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/n239 (net)     3     0.00     0.36 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/U133/Q (OA22X1)     0.09     0.17     0.52 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/n207 (net)     1     0.00     0.52 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/U134/Q (AO21X1)     0.09     0.12     0.65 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/n208 (net)     2     0.00     0.65 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/U135/Q (AO222X1)     0.14     0.26     0.91 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/n209 (net)     2     0.00     0.91 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/U136/Q (AO222X1)     0.14     0.27     1.18 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/n210 (net)     2     0.00     1.18 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/U137/Q (AO222X1)     0.14     0.27     1.44 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/n211 (net)     2     0.00     1.44 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/U138/Q (AO222X1)     0.13     0.26     1.70 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/n212 (net)     1     0.00     1.70 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/U140/Q (AO222X1)     0.13     0.27     1.97 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/n214 (net)     1     0.00     1.97 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/U141/Q (AND4X1)     0.09     0.20     2.17 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/n215 (net)     1     0.00     2.17 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/U150/QN (NOR3X0)     0.19     0.07     2.24 r
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/force_terminate (net)     1     0.00     2.24 r
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/force_terminate (apnpsf_datapath)     0.00     2.24 r
+  mbist_decoder_1/apnpsf_decoder_1/force_terminate (net)            0.00       2.24 r
+  mbist_decoder_1/apnpsf_decoder_1/force_terminate (apnpsf_decoder)     0.00     2.24 r
+  mbist_decoder_1/apnpsf_force_terminate (net)                      0.00       2.24 r
+  mbist_decoder_1/U4/Q (AND2X1)                           0.09      0.10       2.34 r
+  mbist_decoder_1/force_terminate (net)         1                   0.00       2.34 r
+  mbist_decoder_1/force_terminate (mbist_decoder)                   0.00       2.34 r
+  force_terminate (net)                                             0.00       2.34 r
+  force_terminate (out)                                   0.09      0.00       2.34 r
+  data arrival time                                                            2.34
+
+  clock clk (rise edge)                                            10.00      10.00
+  clock network delay (ideal)                                       0.10      10.10
+  clock uncertainty                                                -0.10      10.00
+  output external delay                                            -0.10       9.90
+  data required time                                                           9.90
+  ------------------------------------------------------------------------------------------------------
+  data required time                                                           9.90
+  data arrival time                                                           -2.34
+  ------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  7.56
+
+
+  Startpoint: mbist_decoder_1/apnpsf_decoder_1/apnpsf_controller_1/en4_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/address_2_reg_15_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ------------------------------------------------------------------------------------------------------
+  clock clk (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.10       0.10
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_controller_1/en4_reg/CLK (DFFARX1)     0.10     0.00 #     0.10 r
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_controller_1/en4_reg/Q (DFFARX1)     0.09     0.40     0.50 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_controller_1/en4 (net)     3     0.00     0.50 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_controller_1/en4 (apnpsf_controller)     0.00     0.50 f
+  mbist_decoder_1/apnpsf_decoder_1/en4 (net)                        0.00       0.50 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/en4 (apnpsf_datapath)     0.00     0.50 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/en4 (net)      0.00       0.50 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/U253/QN (NOR4X0)     0.69     0.34     0.84 r
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/n718 (net)    11     0.00     0.84 r
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/U252/QN (INVX0)     0.22     0.11     0.96 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/n699 (net)     5     0.00     0.96 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/U244/QN (NOR2X0)     0.27     0.14     1.09 r
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/n599 (net)     7     0.00     1.09 r
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/U218/QN (NAND2X0)     0.27     0.14     1.24 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/n714 (net)     7     0.00     1.24 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/U381/Q (OR4X1)     0.09     0.17     1.41 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/n354 (net)     1     0.00     1.41 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/U247/QN (NOR2X0)     0.18     0.09     1.50 r
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/n916 (net)     3     0.00     1.50 r
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/U242/QN (NOR2X0)     0.36     0.16     1.67 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/n479 (net)    16     0.00     1.67 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/U351/Q (AO22X1)     0.13     0.23     1.89 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/address[9] (net)     5     0.00     1.89 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/U532/Q (AND4X1)     0.09     0.19     2.08 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/n443 (net)     1     0.00     2.08 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/U533/Q (OA21X1)     0.09     0.14     2.21 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/n447 (net)     1     0.00     2.21 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/U125/Q (AND2X1)     0.06     0.11     2.32 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/n198 (net)     1     0.00     2.32 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/U126/Q (OA222X1)     0.15     0.24     2.56 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/n449 (net)     1     0.00     2.56 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/U176/QN (NAND2X0)     0.13     0.07     2.63 r
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/n340 (net)     1     0.00     2.63 r
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/U342/Q (AND2X1)     0.08     0.11     2.74 r
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/RSOP_343_U1_mbist_decoder_1_apnpsf_decoder_1_apnpsf_datapath_1_RSOP_343_C1_Z_2 (net)     2     0.00     2.74 r
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_U20/Q (XOR2X1)     0.10     0.18     2.92 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_n21 (net)     1     0.00     2.92 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_U15/CO (FADDX1)     0.12     0.20     3.12 f mo 
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_n14 (net)     1     0.00     3.12 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_U14/CO (FADDX1)     0.13     0.21     3.33 f mo 
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_n13 (net)     1     0.00     3.33 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_U13/CO (FADDX1)     0.13     0.21     3.54 f mo 
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_n12 (net)     1     0.00     3.54 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_U12/CO (FADDX1)     0.13     0.21     3.76 f mo 
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_n11 (net)     1     0.00     3.76 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_U11/CO (FADDX1)     0.13     0.21     3.97 f mo 
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_n10 (net)     1     0.00     3.97 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_U10/CO (FADDX1)     0.13     0.21     4.19 f mo 
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_n9 (net)     1     0.00     4.19 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_U9/CO (FADDX1)     0.13     0.21     4.40 f mo 
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_n8 (net)     1     0.00     4.40 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_U8/CO (FADDX1)     0.13     0.21     4.61 f mo 
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_n7 (net)     1     0.00     4.61 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_U7/CO (FADDX1)     0.13     0.21     4.83 f mo 
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_n6 (net)     1     0.00     4.83 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_U6/CO (FADDX1)     0.13     0.21     5.04 f mo 
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_n5 (net)     1     0.00     5.04 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_U5/CO (FADDX1)     0.13     0.21     5.25 f mo 
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_n4 (net)     1     0.00     5.25 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_U4/CO (FADDX1)     0.13     0.21     5.47 f mo 
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_n3 (net)     1     0.00     5.47 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_U3/CO (FADDX1)     0.10     0.19     5.66 f mo 
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/DP_OP_350_296_6706_n2 (net)     1     0.00     5.66 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/U160/Q (XOR3X1)     0.09     0.30     5.96 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/n230 (net)     1     0.00     5.96 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/U161/Q (AO22X1)     0.10     0.18     6.14 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/n835 (net)     1     0.00     6.14 f
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/address_2_reg_15_/D (DFFARX1)     0.10     0.00     6.14 f
+  data arrival time                                                            6.14
+
+  clock clk (rise edge)                                            10.00      10.00
+  clock network delay (ideal)                                       0.10      10.10
+  clock uncertainty                                                -0.10      10.00
+  mbist_decoder_1/apnpsf_decoder_1/apnpsf_datapath_1/address_2_reg_15_/CLK (DFFARX1)     0.00    10.00 r
+  library setup time                                               -0.14       9.86
+  data required time                                                           9.86
+  ------------------------------------------------------------------------------------------------------
+  data required time                                                           9.86
+  data arrival time                                                           -6.14
+  ------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  3.72
+
+
+1

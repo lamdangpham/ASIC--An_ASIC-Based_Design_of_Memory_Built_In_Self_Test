@@ -1,0 +1,101 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : qor
+Design : vr
+Version: C-2009.06
+Date   : Mon Jan  2 14:56:05 2017
+****************************************
+
+
+  Timing Path Group 'FEEDTHROUGH'
+  -----------------------------------
+  Levels of Logic:              12.00
+  Critical Path Length:          2.22
+  Critical Path Slack:           7.48
+  Critical Path Clk Period:     10.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+  Timing Path Group 'REGIN'
+  -----------------------------------
+  Levels of Logic:               4.00
+  Critical Path Length:          2.19
+  Critical Path Slack:           7.40
+  Critical Path Clk Period:     10.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+  Timing Path Group 'REGOUT'
+  -----------------------------------
+  Levels of Logic:              11.00
+  Critical Path Length:          2.53
+  Critical Path Slack:           7.27
+  Critical Path Clk Period:     10.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+  Timing Path Group 'clk'
+  -----------------------------------
+  Levels of Logic:              18.00
+  Critical Path Length:          2.45
+  Critical Path Slack:           7.30
+  Critical Path Clk Period:     10.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:          6
+  Hierarchical Port Count:       1877
+  Leaf Cell Count:               2801
+  Buf/Inv Cell Count:             131
+  CT Buf/Inv Cell Count:            0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:    14119.153221
+  Noncombinational Area: 32105.784481
+  Net Area:                  0.000000
+  -----------------------------------
+  Cell Area:             46224.937702
+  Design Area:           46224.937702
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:          3397
+  Nets With Violations:             0
+  -----------------------------------
+
+
+  Hostname: quangtruong
+
+  Compile CPU Statistics
+  -----------------------------------
+  Resource Sharing:              1.63
+  Logic Optimization:            5.82
+  Mapping Optimization:          6.55
+  -----------------------------------
+  Overall Compile Time:         21.43
+
+1

@@ -1,0 +1,107 @@
+#memory_width  #memory_length  #address_issue         #Issue_code    #alogrithm      #memtype    #is_waveform    #memory_selection 
+32               65535           50000                 0101           0              30        true             0    #SAF: Fix ABCD in one row --> Can not access this row       --> SAF for row
+#64               511             100                   0102           2              2         true             1    #SAF: Fix 0 in all cells of row --> Can not access this row --> SAF for row
+#8                1023            344                   0103           0              4         true             2    #SAF: Fix 1 in all cells of row --> Can not access this row --> SAF for row
+#16               2047            999                   0104           2              9         true             3    #AF: Fix 1 in one cell of row --> Can not change the cell --> SAF for cell
+#8                4095            3152                  0105           0              12        true             4    #SF: Fix 0 in one cell of row --> Can not change the cell --> SAF for cell
+##S#############################################################       0             ################################################################################
+#32               8191             4363           0201           0                18         true             0    # TF: 4th bit transition(0-->1) and write operation change itself,become 0 value
+#16               16383             7893          0202           2                21         true             1    # TF: 4th bit transition(1-->0) and write operation change itself,become 1 value
+#64               32767             20000         0203           2                27         true             3    # TF: 0th bit transition(0-->1) and write operation change itself,become 0 value
+#8                65535             32648         0204            0                28         true             3    # TF: 0th bit transition(1-->0) and write operation change itself,become 1 value
+###############################################################        0             ################################################################################
+#32               65535            29134                  0301           0                30         true             1    # CFin_01: [512][4] rise --> [512][3] invert 
+#16               16383            3216                   0302           0                21         true             2    # CFin_02: [512][4] fall --> [512][3] invert 
+#64               4095             1658                   0303           0                15         true             3    # CFin_03: [512][1] rise --> [512][2] invert 
+#8                1023             329                    0304           0                4          true             4    # CFin_04: [512][1] fall --> [512][2] invert 
+###############################################################        0             ################################################################################
+#32               32767           12345                   0311           2                26         true             6    #CFid_01: [512][4] rise --> [512][3] = 1 
+#16               8191            5123                    0312           0                17         true             7    #CFid_02: [512][4] fall --> [512][3] = 0 
+#32               2047            438                     0313           0                10         true             1    #CFid_03: [512][1] rise --> [512][2] = 1
+#64               511             256                     0314           0                2          true             4    #CFid_04: [512][1] fall --> [512][2] = 0
+#16               1023            589                     0321           0                5          true             3    #CFdyn_01: [511][4] rise --> [512][3] = 1 
+#8                2047            999                     0322           0                8          true             5    #CFdyn_02: [511][4] fall --> [512][3] = 0 
+#8                4095            1345                    0323           0                12         true             2    #CFdyn_03: [511][1] rise --> [512][2] = 1
+#64               8191            7652                    0324           0                19         true             1    #CFdyn_04: [511][1] fall --> [512][2] = 0
+###############################################################        0             ################################################################################
+#32               65535            32148                  0501           1               30          true             2    #Active_01: [511][5] rise_B --> [512][5] invert
+#16               32767            22448                  0502           1               25          true             3    #Active_02: [511][5] fall_B --> [512][5] invert 
+#32               16383             8132                   0503           1               22          true             4    #Active_03: [513][5] rise_A --> [512][5] invert
+#32               511              333                    0504           1               2           true             5    #Active_04: [513][5] fall_A --> [512][5] invert
+#8                2047             99                     0505           1               8           true             6    #Active_05: [512][6] rise_C --> [512][5] invert 
+#8                4095             321                    0506           1               12          true             7    #Active_06: [512][6] fall_C --> [512][5] invert 
+#32               8191             2365                   0507           1               18          true             1    #Active_07: [512][4] rise_D --> [512][5] invert
+#64               16383            12656                  0508           1               23          true             0    #Active_08: [512][4] fall_D --> [512][5] invert
+###############################################################        0             ################################################################################
+#32               65535            4593                   0521           1                30        true             7    #Active_01: [511][1] rise_B --> [512][1] invert
+#16               32767            12345                  0522           1                25        true             5    #Active_02: [511][1] fall_B --> [512][1] invert 
+#64               16383            7854                   0523           1                23        true             5    #Active_03: [513][1] rise_A --> [512][1] invert
+#32               8191             4562                   0524           1                18        true             4    #Active_04: [513][1] fall_A --> [512][1] invert
+#8                4095             3216                   0525           1                12        true             3    #Active_05: [512][2] rise_C --> [512][1] invert 
+#8                2047             956                    0526           1                8         true             2    #Active_06: [512][2] fall_C --> [512][1] invert 
+#64               1023             263                    0527           1                7         true             1    #Active_07: [512][0] rise_D --> [512][1] invert
+#32               511              111                    0528           1                2         true             0    #Active_08: [512][0] fall_D --> [512][1] invert
+###############################################################        0             ################################################################################
+#64               32767           22333                   0601           1                27         true             6    #Passive_01: ABCD-0001 --> [512][5] no change
+#16               8191             5326                   0602           1                17         true             7    #Passive_02: ABCD-0010 --> [512][5] no change 
+#64               32767           22333                   0603           1                27         true             5    #Passive_03: ABCD-0011 --> [512][5] no change
+#64               511             203                     0604           1                2          true             4    #Passive_04: ABCD-0100 --> [512][5] no change
+#64               32767           22333                   0605           1                27         true             3    #Passive_05: ABCD-0101 --> [512][5] no change
+#8                2047             1978                   0606           1                8          true             2    #Passive_06: ABCD-0110 --> [512][5] no change 
+#64               32767           22333                   0607           1                27         true             1    #Passive_07: ABCD-0111 --> [512][5] no change
+#8                4095            2323                    0608           1                12         true             0    #Passive_08: ABCD-1000 --> [512][5] no change
+#32               16383           10000                   0609           1                22         true             1    #Passive_09: ABCD-1001 --> [512][5] no change
+#32               16383           10000                   060A           1                22         true             2    #Passive_10: ABCD-1010 --> [512][5] no change
+#32               16383           10000                   060B           1                22         true             3    #Passive_11: ABCD-1011 --> [512][5] no change
+#32               16383           10000                   060C           1                22         true             4    #Passive_12: ABCD-1100 --> [512][5] no change
+#32               511             444                     060D           1                2          true             5    #Passive_13: ABCD-1101 --> [512][5] no change
+#32               16383           10000                   060E           1                22         true             6    #Passive_14: ABCD-1110 --> [512][5] no change
+#32               16383           10000                   060F           1                22         true             7    #Passive_15: ABCD-1111 --> [512][5] no change
+###############################################################        0             ###############################################################################
+#16               4095             1954                    0621           1                13         true             4    #Passive_01: ABCD-0001 --> [512][1] no change
+#16               4095             1954                    0622           1                13         true             7    #Passive_02: ABCD-0010 --> [512][1] no change 
+#16               4095             1954                    0623           1                13         true             6    #Passive_03: ABCD-0011 --> [512][1] no change
+#16               4095             1954                    0624           1                13         true             5    #Passive_04: ABCD-0100 --> [512][1] no change
+#16               4095             1954                    0625           1                13         true             3    #Passive_05: ABCD-0101 --> [512][1] no change
+#32               8191             1954                    0626           1                18         true             2    #Passive_06: ABCD-0110 --> [512][1] no change 
+#32               8191             1954                    0627           1                18         true             1    #Passive_07: ABCD-0111 --> [512][1] no change
+#32               8191             1954                    0628           1                18         true             0    #Passive_08: ABCD-1000 --> [512][1] no change
+#32               8191             1954                    0629           1                18         true             1    #Passive_09: ABCD-1001 --> [512][1] no change
+#32               8191             1954                    062A           1                18         true             2    #Passive_10: ABCD-1010 --> [512][1] no change
+#64               2047             1954                    062B           1                11         true             3    #Passive_11: ABCD-1011 --> [512][1] no change
+#64               2047             1954                    062C           1                11         true             4    #Passive_12: ABCD-1100 --> [512][1] no change
+#64               2047             1954                    062D           1                11         true             5    #Passive_13: ABCD-1101 --> [512][1] no change
+#64               2047             1954                    062E           1                11         true             6    #Passive_14: ABCD-1110 --> [512][1] no change
+#64               2047             1954                    062F           1                11         true             7    #Passive_15: ABCD-1111 --> [512][1] no change
+###############################################################        0             ################################################################################
+#8                8191             3991                   0701          1                  16        true              2   #Passive_01: ABCD-0001 --> [512][5] no change
+#8                8191             3991                   0702          1                  16        true              3   #Passive_02: ABCD-0010 --> [512][5] no change 
+#8                8191             3991                   0703          1                  16        true              4   #Passive_03: ABCD-0011 --> [512][5] no change
+#8                8191             3991                   0704          1                  16        true              5   #Passive_04: ABCD-0100 --> [512][5] no change
+#8                8191             3991                   0705          1                  16        true              6   #Passive_05: ABCD-0101 --> [512][5] no change
+#8                8191             3991                   0706          1                  16        true              7   #Passive_06: ABCD-0110 --> [512][5] no change 
+#8                8191             3991                   0707          1                  16        true              1   #Passive_07: ABCD-0111 --> [512][5] no change
+#8                8191             3991                   0708          1                  16        true              0   #Passive_08: ABCD-1000 --> [512][5] no change
+#8                8191             3991                   0709          1                  16        true              0   #Passive_08: ABCD-1000 --> [512][5] no change
+#64               511              444                    070A          1                  3         true              2   #Passive_10: ABCD-1010 --> [512][5] no change
+#64               511              444                    070B          1                  3         true              3   #Passive_11: ABCD-1011 --> [512][5] no change
+#64               511              444                    070C          1                  3         true              4   #Passive_12: ABCD-1100 --> [512][5] no change
+#64               511              444                    070D          1                  3         true              5   #Passive_13: ABCD-1101 --> [512][5] no change
+#64               511              444                    070E          1                  3         true              6   #Passive_14: ABCD-1110 --> [512][5] no change
+#64               511              444                    070F          1                  3         true              7   #Passive_15: ABCD-1111 --> [512][5] no change
+###############################################################        0             ################################################################################
+#16               2047             2016                    0721          1                 9        true              3  #Passive_01: ABCD-0001 --> [512][1] no change
+#16               2047             2016                    0722          1                 9         true              4  #Passive_02: ABCD-0010 --> [512][1] no change 
+#16               2047             2016                    0723          1                 9         true              5  #Passive_03: ABCD-0011 --> [512][1] no change
+#16               2047             2016                    0724          1                 9         true              6  #Passive_04: ABCD-0100 --> [512][1] no change
+#16               2047             2016                    0725          1                 9         true              7  #Passive_05: ABCD-0101 --> [512][1] no change
+#16               2047             2016                    0726          1                 9         true              2  #Passive_06: ABCD-0110 --> [512][1] no change 
+#16               2047             2016                    0727          1                 9         true              1  #Passive_07: ABCD-0111 --> [512][1] no change
+#16               2047             2016                    0728          1                 9         true              0  #Passive_08: ABCD-1000 --> [512][1] no change
+#16               2047             2016                    0729          1                 9         true              1  #Passive_09: ABCD-1001 --> [512][1] no change
+#32               8191             2016                    072A          1                18         true              2  #Passive_10: ABCD-1010 --> [512][1] no change
+#32               8191             2016                    072B          1                18         true              3  #Passive_11: ABCD-1011 --> [512][1] no change
+#32               8191             2016                    072C          1                18         true              4  #Passive_12: ABCD-1100 --> [512][1] no change
+#32               8191             2016                    072D          1                18         true              5  #Passive_13: ABCD-1101 --> [512][1] no change
+#32               8191             2016                    072E          1                18         true              6  #Passive_14: ABCD-1110 --> [512][1] no change
+#32               8191             2016                    072F          1                18         true              7  #Passive_15: ABCD-1111 --> [512][1] no change

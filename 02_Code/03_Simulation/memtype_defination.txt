@@ -1,0 +1,23 @@
+memtype [4:2] = 3'b000          --> address = 9  bit   512
+memtype [4:2] = 3'b001          --> address = 10 bit   1024
+memtype [4:2] = 3'b010          --> address = 11 bit   2048
+memtype [4:2] = 3'b011          --> address = 12 bit   4096
+memtype [4:2] = 3'b100          --> address = 13 bit   8192
+memtype [4:2] = 3'b101          --> address = 14 bit   16384
+memtype [4:2] = 3'b110          --> address = 15 bit   32768
+memtype [4:2] = 3'b111          --> address = 16 bit   65536
+
+
+memtype [1:0] = 2'b00  data = 8 bit
+memtype [1:0] = 2'b01  data = 16 bit
+memtype [1:0] = 2'b10  data = 32 bit
+memtype [1:0] = 2'b11  data = 64 bit
+
+
+
+
+--- DEFINATION FOR MBIST
+
+The fault memory is defined based on the addr_width and data width and wrong_address
+
+According to the fault memory, the memtype will be properly chosen, MBIT performance based on the memtype. But, toatal pin for MBIST always is maximum. In this MBIST, the output of data_width is 64 and addr_width is 8.

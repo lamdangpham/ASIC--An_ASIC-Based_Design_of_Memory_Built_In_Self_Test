@@ -1,10 +1,19 @@
-# A Basic DNN Network Applied For MNIST Handwriting Dataset
+# An ASIC-Based Design of Memory-Built-In-Self-Test (MBIST)
 
+This work is for “Develop an ASIC-Based Design of Memory Built In Seft Test (MBIST)” project funded by Department Science and Technology of Ho Chi Minh City, Vietnam.
 
-01_script	Add files via upload	1 hour ago
-02_design	Add files via upload	1 hour ago
-03_Simulation	Delete session_2016-12-27T22_57_46.tcl	33 minutes ago
-04_algorithm	Add files via upload	1 hour ago
-05_waveform	Add files via upload	1 hour ago
-06_synthesize_result	Add files via upload	1 hour ago
-tree_structure.txt
+We achieved a dynamic VLSI architecture of Memory Built In Seft Test (MBIST), which can re-configure and adapt wide range of SRAM memory. This design integrates two testing algorithm MARCHA and APNPSP that are effective to verify memory errors. 
+
+   
+# Hierarchy:
+
+01_Publications_Docs:
+
+02_Codes:
++ 01_script	: Scripts to generate memory errors
++ 02_design	: RTL design (Verilog HDL)
++ 03_Simulation:  Simulation environment (RTL design and testbench)	
++ 04_algorithm: Build MARCHA and APNPSP alogirhms with Verilog HDL (RTL Design)
++ 05_waveform: Simulation waveform
++ 06_synthesize_result: Synthesis reports	
+

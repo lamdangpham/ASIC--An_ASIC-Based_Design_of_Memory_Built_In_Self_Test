@@ -1,0 +1,83 @@
+Command: vcs -R +v2k -debug_all apnpsf_controller.v apnpsf_datapath.v apnpsf_decoder.v \
+controller.v fault_mem.v marcha_controller.v marcha_datapath.v marcha_decoder.v marchc_controller.v \
+marchc_datapath.v marchc_decoder.v mbist_decoder.v mbist_mux_demux.v mbist.v testbench.v \
+-l vcs_0101.log
+                         Chronologic VCS (TM)
+          Version D-2010.06-SP1 -- Tue Dec 27 23:18:02 2016
+               Copyright (c) 1991-2010 by Synopsys Inc.
+                         ALL RIGHTS RESERVED
+
+This program is proprietary and confidential information of Synopsys Inc.
+and may be used and disclosed only as authorized in a license agreement
+controlling such use and disclosure.
+
+Parsing design file 'apnpsf_controller.v'
+Parsing design file 'apnpsf_datapath.v'
+Parsing design file 'apnpsf_decoder.v'
+Parsing design file 'controller.v'
+Parsing design file 'fault_mem.v'
+Parsing design file 'marcha_controller.v'
+Parsing design file 'marcha_datapath.v'
+Parsing design file 'marcha_decoder.v'
+Parsing design file 'marchc_controller.v'
+Parsing design file 'marchc_datapath.v'
+Parsing design file 'marchc_decoder.v'
+Parsing design file 'mbist_decoder.v'
+Parsing design file 'mbist_mux_demux.v'
+Parsing design file 'mbist.v'
+Parsing design file 'testbench.v'
+Top Level Modules:
+       testbench
+No TimeScale specified
+
+Warning-[PCWM-W] Port connection width mismatch
+testbench.v, 76
+"fault_mem fault_mem_test( .clk (clk),  .address (address),  .write_read (write_read),  .wdata (wdata),  .rdata (rdata));"
+  The following 64-bit expression is connected to 32-bit port "wdata" of 
+  module "fault_mem", instance "fault_mem_test".
+  Expression: wdata
+  	use +lint=PCWM for more details
+
+
+Warning-[PCWM-W] Port connection width mismatch
+testbench.v, 76
+"fault_mem fault_mem_test( .clk (clk),  .address (address),  .write_read (write_read),  .wdata (wdata),  .rdata (rdata));"
+  The following 64-bit expression is connected to 32-bit port "rdata" of 
+  module "fault_mem", instance "fault_mem_test".
+  Expression: rdata
+  	use +lint=PCWM for more details
+
+Starting vcs inline pass...
+5 modules and 0 UDP read.
+	However, due to incremental compilation, only 1 module needs to be compiled.
+recompiling module testbench because:
+	This module or some inlined child module(s) has/have been modified.
+ld -r -m elf_i386 -o pre_vcsobj_1_1.o --whole-archive pre_vcsobj_1_1.a --no-whole-archive \
+
+if [ -x ../simv ]; then chmod -x ../simv; fi
+g++  -o ../simv -melf_i386   _vcsobj_1_1.o  5NrI_d.o 5NrIB_d.o SIM_l.o    pre_vcsobj_1_1.o \
+rmapats_mop.o rmapats.o       /home/quanghan/icdesign/synopsys_src/VCS_D-2010.06-SP1/linux/lib/libvirsim.so \
+/home/quanghan/icdesign/synopsys_src/VCS_D-2010.06-SP1/linux/lib/librterrorinf.so \
+/home/quanghan/icdesign/synopsys_src/VCS_D-2010.06-SP1/linux/lib/libsnpsmalloc.so \
+/home/quanghan/icdesign/synopsys_src/VCS_D-2010.06-SP1/linux/lib/libvcsnew.so    \
+/home/quanghan/icdesign/synopsys_src/VCS_D-2010.06-SP1/linux/lib/vcs_save_restore_new.o \
+/home/quanghan/icdesign/synopsys_src/VCS_D-2010.06-SP1/linux/lib/ctype-stubs_32.a \
+-ldl -lm  -lc -lpthread -ldl 
+../simv up to date
+Command: ./simv +v2k -a vcs_0101.log -oldui
+Chronologic VCS simulator copyright 1991-2010
+Contains Synopsys proprietary information.
+Compiler version D-2010.06-SP1; Runtime version D-2010.06-SP1;  Dec 27 23:18 2016
+
+VCD+ Writer D-2010.06-SP1 Copyright (c) 1991-2010 by Synopsys Inc.
+ == MARCH C ARE RUNNING ==
+MEMORY IS FAILED AT ADDRESS = : 050000
+MEMORY IS FAILED AT ADDRESS = : 050000
+MEMORY IS FAILED AT ADDRESS = : 050000
+MEMORY IS FAILED AT ADDRESS = : 050000
+$finish called from file "testbench.v", line 53.
+$finish at simulation time            525001022
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 525001022
+CPU Time:     14.420 seconds;       Data structure size:   0.5Mb
+Tue Dec 27 23:20:09 2016

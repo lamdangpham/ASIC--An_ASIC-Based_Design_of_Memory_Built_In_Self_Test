@@ -8,8 +8,8 @@ We achieved a dynamic VLSI architecture of Memory Built In Seft Test (MBIST), wh
 # Hierarchy:
 
 01_Publications_Docs:
-+ 2016_MBIST_Master_Thesis.pdf : Vietnamese Language - Summaried Version
-+ 2016_MBIST_Master_Thesis_full.pdf : Vietnamese Language
++ 2016_MBIST_Master_Thesis.pdf : Composed by Vietnamese Language - Summaried Version
++ 2016_MBIST_Master_Thesis_full.pdf : Composed by Vietnamese Language
 
 02_Codes:
 + 01_script	: Scripts to generate memory errors
